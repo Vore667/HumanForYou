@@ -20,8 +20,8 @@ Suivez ces étapes pour lancer l'environnement de travail en moins de 5 minutes 
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [https://github.com/VOTRE_PSEUDO/VOTRE_PROJET.git](https://github.com/VOTRE_PSEUDO/VOTRE_PROJET.git)
-    cd VOTRE_PROJET
+    git clone [https://github.com/Vore667/HumanForYou.git](https://github.com/Vore667/HumanForYou.git)
+    cd HumanForYou
     ```
 
 2.  **Ouvrir avec VS Code :**

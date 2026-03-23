@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Données et Modèles (très important !)
+data/
+models/
+*.pth
+*.onnx
+*.weights
+
+# Docker & VS Code
+.devcontainer/

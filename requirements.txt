@@ -23,3 +23,11 @@ tqdm
 # --- Utilitaires ---
 python-dotenv
 requests
+
+
+# --- Utilisé dans le WS1 ---
+missingno
+folium
+dash
+dash-core-components
+dash-html-components

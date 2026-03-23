@@ -1,10 +1,14 @@
 {
-    "name": "IA-Dev-Env",
+    "name": "IA-CPU-Unified",
     "build": {
-        "dockerfile": "../Dockerfile"
+        "dockerfile": "../Dockerfile",
+        "context": ".."
     },
     "customizations": {
         "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python"
+            },
             "extensions": [
                 "ms-python.python",
                 "ms-toolsai.jupyter",
@@ -12,5 +16,6 @@
             ]
         }
     },
-    "remoteUser": "vscode"
+    "remoteUser": "devuser",
+    "workspaceFolder": "/home/devuser/app"
 }

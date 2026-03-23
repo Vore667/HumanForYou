@@ -1,5 +1,25 @@
-numpy
-pandas
-scikit-learn
+# --- Cœur du projet IA (Versions CPU légères) ---
+# On installe torch via l'index-url CPU dans le Dockerfile, 
+# mais on les liste ici pour la cohérence des imports.
 torch
+torchvision
+torchaudio
+
+# --- Manipulation et Analyse de Données ---
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+
+# --- Visualisation ---
+matplotlib
+seaborn
+plotly
+
+# --- Environnement de Développement ---
 jupyter
+ipykernel
+tqdm
+
+# --- Utilitaires ---
+python-dotenv
+requests

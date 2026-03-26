@@ -14,3 +14,5 @@ models/
 *.pth
 *.onnx
 *.weights
+Workshop1/*
+Arthur/*

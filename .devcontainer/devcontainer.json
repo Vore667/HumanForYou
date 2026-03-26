@@ -7,6 +7,7 @@
     "customizations": {
         "vscode": {
             "settings": {
+                // Pointing to the global python for root
                 "python.defaultInterpreterPath": "/usr/local/bin/python"
             },
             "extensions": [
@@ -17,5 +18,6 @@
         }
     },
     "remoteUser": "root",
-    "workspaceFolder": "/home/devuser/app"
+    // Changed this to match the WORKDIR in your root Dockerfile
+    "workspaceFolder": "/app"
 }

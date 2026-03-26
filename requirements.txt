@@ -31,3 +31,5 @@ folium
 dash
 dash-core-components
 dash-html-components
+nltk
+split-folders

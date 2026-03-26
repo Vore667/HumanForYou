@@ -15,3 +15,4 @@ models/
 *.onnx
 *.weights
 Workshop1/*
+Arthur/*

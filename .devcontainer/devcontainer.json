@@ -16,6 +16,6 @@
             ]
         }
     },
-    "remoteUser": "devuser",
+    "remoteUser": "root",
     "workspaceFolder": "/home/devuser/app"
 }

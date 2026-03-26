@@ -1,28 +1,31 @@
 FROM python:3.11-slim
 
-# Empêche Python de générer des fichiers .pyc
+# 1. Environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+# Ensure pip installs to a global path accessible by root
+ENV PATH="/usr/local/bin:${PATH}"
 
-# Dépendances système de base pour l'IA
+# 2. System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     git \
     libgl1 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Utilisateur standard pour éviter les problèmes de droits
-RUN useradd -ms /bin/bash devuser
-USER devuser
-WORKDIR /home/devuser/app
+# 3. Set Workdir (Using /app is standard for root)
+WORKDIR /app
 
-# Installation des libs (PyTorch CPU est beaucoup plus léger)
-ENV PATH="/home/devuser/.local/bin:${PATH}"
-COPY --chown=devuser:devuser requirements.txt .
+# 4. Install Python dependencies
+COPY requirements.txt .
 
-# Astuce : On force l'installation de la version CPU de Torch pour gagner de la place
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir --user torch --index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir --user -r requirements.txt
+    pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && \
+    pip install --no-cache-dir -r requirements.txt
 
-COPY --chown=devuser:devuser . .
+# 5. Copy project files
+# Note: We removed --chown because root owns everything by default
+COPY . .
+
+# 6. Ensure we stay as root
+USER root

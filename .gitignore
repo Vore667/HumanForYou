@@ -9,7 +9,6 @@ env/
 .ipynb_checkpoints
 
 # Données et Modèles (très important !)
-data/
 models/
 *.pth
 *.onnx

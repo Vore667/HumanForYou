@@ -33,3 +33,6 @@ dash-core-components
 dash-html-components
 nltk
 split-folders
+
+# --- Utilisé dans le WS2 ---
+statsmodels

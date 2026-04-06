@@ -34,9 +34,4 @@ dash-html-components
 nltk
 split-folders
 
-<<<<<<< Updated upstream
 statsmodel
-=======
-# --- Utilisé dans le WS2 ---
-statsmodels
->>>>>>> Stashed changes

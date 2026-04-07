@@ -36,3 +36,4 @@ split-folders
 
 # --- Utilisé dans le WS2 ---
 statsmodels
+xgboost
